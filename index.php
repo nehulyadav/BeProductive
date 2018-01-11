@@ -107,16 +107,16 @@ $("#submit").click(function(){
     $("#main").slideUp();
     $("#submit").slideUp();
     $("#submit2").slideUp();
-	if (document.getElementById("inp2").value == "") {
-		alert("enter a valid private string or click signup");
-	} else {
+  if (document.getElementById("inp2").value == "") {
+    alert("enter a valid private string or click signup");
+  } else {
     
     firebase.database().ref("/users/").once("value").then(function(snapshot) {
               snapshot.forEach(function(childSnapshot) {
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
     setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("login.php"); }, 1000);
+                      location.replace("http://0566fd2b.ngrok.io/login.php"); }, 1000);
 
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
@@ -146,10 +146,10 @@ function runScript(e) {
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
      setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("login.php"); }, 1000);
+                      location.replace("http://0566fd2b.ngrok.io/login.php"); }, 1000);
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
-                            location.replace("v.php");
+                            location.replace("http://0566fd2b.ngrok.io/v.php");
                    } 
 
   });
@@ -170,7 +170,7 @@ $("#submit2").click(function(){
     $("#heading").html("Hang tight...");
     $("#main").slideUp();
     $("#submit2").slideUp();
-    setTimeout(function(){ location.replace("login.php");}, 3000);
+    setTimeout(function(){ location.replace("http://0566fd2b.ngrok.io/login.php");}, 3000);
     
 });
 

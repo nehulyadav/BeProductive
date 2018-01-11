@@ -36,7 +36,7 @@ echo '   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.
 var config = {
     apiKey: "AIzaSyBaHSrorPiRAu3pXRD-4FMwmCxJAizRbss",
     authDomain: "presentify-ee169.firebaseapp.com",
-    databaseURL: "https://presentify-ee169.firebaseio.com",v
+    databaseURL: "https://presentify-ee169.firebaseio.com",
     projectId: "presentify-ee169",
     storageBucket: "",
     messagingSenderId: "1045114376426"
@@ -103,10 +103,6 @@ function getCookie(cname) {
   echo '
 <script>
 $("#submit").click(function(){
-    $("#heading").html("Hang tight...");
-    $("#main").slideUp();
-    $("#submit").slideUp();
-    $("#submit2").slideUp();
   if (document.getElementById("inp2").value == "") {
     alert("enter a valid private string or click signup");
   } else {
@@ -115,11 +111,14 @@ $("#submit").click(function(){
               snapshot.forEach(function(childSnapshot) {
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
-    setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("https://beproductivemiami.herokuapp.com/"); }, 3000);
 
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
+                             $("#main").slideUp();
+   $("#heading").html("Hang tight...");
+    $("#main").slideUp();
+    $("#submit").slideUp();
+    $("#submit2").slideUp();
                             location.replace("https://0566fd2b.ngrok.io/v.php");
                           }
                              
@@ -133,11 +132,6 @@ $("#submit").click(function(){
 
 function runScript(e) {
     if (e.keyCode == 13) {
-       $("#heading").html("Hang tight...");
-    $("#main").slideUp();
-    $("#submit").slideUp();
-    $("#submit2").slideUp();
-
         if (document.getElementById("inp2").value == "") {
     alert("enter a valid private string or click signup");
   } else {
@@ -145,10 +139,13 @@ function runScript(e) {
               snapshot.forEach(function(childSnapshot) {
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
-     setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("https://beproductivemiami.herokuapp.com/"); }, 3000);
+     
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
+                            $("#heading").html("Hang tight...");
+    $("#main").slideUp();
+    $("#submit").slideUp();
+    $("#submit2").slideUp();
                             location.replace("https://0566fd2b.ngrok.io/v.php");
                    } 
 
@@ -170,7 +167,7 @@ $("#submit2").click(function(){
     $("#heading").html("Hang tight...");
     $("#main").slideUp();
     $("#submit2").slideUp();
-    setTimeout(function(){ location.replace("https://0566fd2b.ngrok.io/login.php");}, 3000);
+    setTimeout(function(){ location.replace("login.php");}, 3000);
     
 });
 

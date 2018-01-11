@@ -36,7 +36,7 @@ echo '   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.
 var config = {
     apiKey: "AIzaSyBaHSrorPiRAu3pXRD-4FMwmCxJAizRbss",
     authDomain: "presentify-ee169.firebaseapp.com",
-    databaseURL: "https://presentify-ee169.firebaseio.com",
+    databaseURL: "https://presentify-ee169.firebaseio.com",v
     projectId: "presentify-ee169",
     storageBucket: "",
     messagingSenderId: "1045114376426"
@@ -116,7 +116,7 @@ $("#submit").click(function(){
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
     setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("http://0566fd2b.ngrok.io/login.php"); }, 1000);
+                      location.replace("http://0566fd2b.ngrok.io/login.php"); }, 3000);
 
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
@@ -146,7 +146,7 @@ function runScript(e) {
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
      setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("http://0566fd2b.ngrok.io/login.php"); }, 1000);
+                      location.replace("http://0566fd2b.ngrok.io/login.php"); }, 3000);
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
                             location.replace("http://0566fd2b.ngrok.io/v.php");

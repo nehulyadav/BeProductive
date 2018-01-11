@@ -116,11 +116,11 @@ $("#submit").click(function(){
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
     setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("http://0566fd2b.ngrok.io/login.php"); }, 3000);
+                      location.replace("https://0566fd2b.ngrok.io/login.php"); }, 3000);
 
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
-                            location.replace("http://0566fd2b.ngrok.io/v.php");
+                            location.replace("https://0566fd2b.ngrok.io/v.php");
                           }
                              
 
@@ -146,10 +146,10 @@ function runScript(e) {
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
      setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("http://0566fd2b.ngrok.io/login.php"); }, 3000);
+                      location.replace("https://0566fd2b.ngrok.io/login.php"); }, 3000);
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
-                            location.replace("http://0566fd2b.ngrok.io/v.php");
+                            location.replace("https://0566fd2b.ngrok.io/v.php");
                    } 
 
   });
@@ -170,7 +170,7 @@ $("#submit2").click(function(){
     $("#heading").html("Hang tight...");
     $("#main").slideUp();
     $("#submit2").slideUp();
-    setTimeout(function(){ location.replace("http://0566fd2b.ngrok.io/login.php");}, 3000);
+    setTimeout(function(){ location.replace("https://0566fd2b.ngrok.io/login.php");}, 3000);
     
 });
 

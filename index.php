@@ -116,7 +116,7 @@ $("#submit").click(function(){
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
     setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("https://0566fd2b.ngrok.io/login.php"); }, 3000);
+                      location.replace("https://beproductivemiami.herokuapp.com/"); }, 3000);
 
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
@@ -146,7 +146,7 @@ function runScript(e) {
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
      setTimeout(function(){ alert("Sorry incorrect private string!");
-                      location.replace("https://0566fd2b.ngrok.io/login.php"); }, 3000);
+                      location.replace("https://beproductivemiami.herokuapp.com/"); }, 3000);
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
                             location.replace("https://0566fd2b.ngrok.io/v.php");

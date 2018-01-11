@@ -120,7 +120,7 @@ $("#submit").click(function(){
 
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
-                            location.replace("v.php");
+                            location.replace("http://0566fd2b.ngrok.io/v.php");
                           }
                              
 

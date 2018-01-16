@@ -119,7 +119,7 @@ $("#submit").click(function(){
     $("#main").slideUp();
     $("#submit").slideUp();
     $("#submit2").slideUp();
-                            location.replace("https://0566fd2b.ngrok.io/v.php");
+                            location.replace("https://444d79c5.ngrok.io/v.php");
                           }
                              
 
@@ -146,7 +146,7 @@ function runScript(e) {
     $("#main").slideUp();
     $("#submit").slideUp();
     $("#submit2").slideUp();
-                            location.replace("https://0566fd2b.ngrok.io/v.php");
+                            location.replace("https://444d79c5.ngrok.io/v.php");
                    } 
 
   });

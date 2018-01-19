@@ -1,5 +1,4 @@
 <style>
-
 .footer {
    position: fixed;
    left: 0;
@@ -9,20 +8,13 @@
    color: white;
    text-align: center;
 }
-
-
-
 </style>
 
 <?php
-
 //echo $_POST["var"];
 echo '  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
 echo '  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">';
 echo '   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
-
-
-
 ?>
 
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -42,14 +34,12 @@ var config = {
     messagingSenderId: "1045114376426"
   };
   firebase.initializeApp(config);
-
 function writeUserData(name) {
   var database = firebase.database();
   firebase.database().ref('users/' + name).set({
     title: " "
   });
 }
-
 </script>
 
 <script type="text/javascript">
@@ -59,7 +49,6 @@ function writeUserData(name) {
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -75,7 +64,6 @@ function getCookie(cname) {
     }
     return "";
 }
-
 </script>
 
 
@@ -99,7 +87,6 @@ function getCookie(cname) {
 </div>
 
   <?php
-
   echo '
 <script>
 $("#submit").click(function(){
@@ -111,7 +98,6 @@ $("#submit").click(function(){
               snapshot.forEach(function(childSnapshot) {
     var user = childSnapshot.key;
     var title = childSnapshot.val().title;
-
                    if (user == document.getElementById("inp2").value) {
                             setCookie("f", document.getElementById("inp2").value, 365);
                              $("#main").slideUp();
@@ -122,14 +108,10 @@ $("#submit").click(function(){
                             location.replace("https://33a9272e.ngrok.io/v.php");
                           }
                              
-
-
   });
 });
 }
-
 });
-
 function runScript(e) {
     if (e.keyCode == 13) {
         if (document.getElementById("inp2").value == "") {
@@ -148,14 +130,11 @@ function runScript(e) {
     $("#submit2").slideUp();
                             location.replace("https://33a9272e.ngrok.io/v.php");
                    } 
-
   });
 });
 }
     }
 }
-
-
 $("#submit2").click(function(){
     $("#submit").fadeOut();
     $("#heading").html("Enter a random private string that you can <b> remember as your password </b> below:");
@@ -170,14 +149,8 @@ $("#submit2").click(function(){
     setTimeout(function(){ location.replace("login.php");}, 3000);
     
 });
-
 });
-
-
 </script>';
-
-
-
   ?>
 
 <div class="footer">
